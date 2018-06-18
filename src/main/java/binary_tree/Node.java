@@ -31,12 +31,10 @@ public class Node {
 	public String search(Node root, String value) {
 		if (value.equals(root.value)){
 			return root.data;
-	    } else if (value.compareTo(root.value) < 0) {
-	    	return root.left == null ? null : search(root.left, value);
-	    } else {
-	    	return root.right == null ? null : search(root.right, value);
-	    }
-	}
-	
-	
+		} else if (value.compareTo(root.value) < 0) {
+			return root.left == null ? null : search(root.left, value);
+		} else {
+			return root.right == null ? null : search(root.right, value);
+		}
+	}	
 }
